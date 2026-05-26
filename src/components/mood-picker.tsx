@@ -30,8 +30,7 @@ export function MoodPicker({ value, onChange }: Props) {
                 ? ({
                     backgroundColor: `color-mix(in oklab, ${m.color} 28%, var(--card))`,
                     boxShadow: `0 10px 30px -10px ${m.color}`,
-                    // @ts-expect-error css var
-                    "--tw-ring-color": m.color,
+                    ["--tw-ring-color" as string]: m.color,
                   } as React.CSSProperties)
                 : undefined
             }
