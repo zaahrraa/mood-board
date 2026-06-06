@@ -35,20 +35,20 @@ function LoginPage() {
   }, [session, loading, navigate]);
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center px-4 py-12">
-      <div className="absolute inset-x-0 top-10 mx-auto w-fit text-center">
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="text-4xl">🌤️</div>
-          <h1 className="font-display mt-2 text-4xl">Mood Board</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Log how you feel. See how you&apos;ve been.
-          </p>
-        </motion.div>
-      </div>
+    <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-4 py-12">
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center"
+      >
+        <div className="text-4xl">🌤️</div>
+        <h1 className="font-display mt-2 text-4xl">Mood Board</h1>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Log how you feel. See how you&apos;ve been.
+        </p>
+      </motion.div>
+
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
